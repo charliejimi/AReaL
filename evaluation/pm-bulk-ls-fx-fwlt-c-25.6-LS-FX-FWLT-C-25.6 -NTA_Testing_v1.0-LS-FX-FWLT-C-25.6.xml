@@ -754,29 +754,7 @@
         <counter objectType="ietf-interfaces:interfaces-state/interface"
                  counterName="statistics/bbf-interfaces-statistics-management:out-pkts"
                  counterGuiName="Outbound Packets" unit="pkts" collected="Y" isAdmin="N" isOper="N"/>
-        <!--PON Utilization-->
-        <counter objectType="ietf-interfaces:interfaces-state/interface/nokia-interface-speed-monitoring:speed-monitoring/data/history" counterName="receive-datarate" counterGuiName="Speed Monitoring - Receive Datarate" unit="megabit/second" collected="Y" tca="Y">
-			<thresholds>
-				<threshold defaultValue="15" operator="gt" alarmTypeId="pon-receive-datarate-prediction-alert">
-					<earlyNotification predictionWindow="1" updatePeriod="5" model="prophet" window="2">
-						<argument name="interval_width" value="0.95"/>
-						<argument name="yearly_seasonality" value="false"/>
-						<argument name="seasonality_mode" value="additive"/>
-					</earlyNotification>
-				</threshold>
-			</thresholds>
-		</counter>
-		<counter objectType="ietf-interfaces:interfaces-state/interface/nokia-interface-speed-monitoring:speed-monitoring/data/history" counterName="transmit-datarate" counterGuiName="Speed Monitoring - Transmit Datarate" unit="megabit/second" collected="Y" tca="Y">
-			<thresholds>
-				<threshold defaultValue="12" operator="gt" alarmTypeId="pon-transmit-datarate-prediction-alert">
-					<earlyNotification predictionWindow="1" updatePeriod="5" model="prophet" window="2">
-						<argument name="interval_width" value="0.95"/>
-						<argument name="yearly_seasonality" value="false"/>
-						<argument name="seasonality_mode" value="additive"/>
-				    </earlyNotification>
-				</threshold>
-			</thresholds>
-		</counter>
+        
         <counter objectType="ietf-interfaces:interfaces-state/interface/nokia-interface-speed-monitoring:speed-monitoring/data/history" counterName="transmit-broadcast-datarate" counterGuiName="Speed Monitoring - Transmit Datarate - Broadcast" unit="megabit/second" collected="Y"/>
         <counter objectType="ietf-interfaces:interfaces-state/interface/nokia-interface-speed-monitoring:speed-monitoring/data/history" counterName="transmit-multicast-datarate" counterGuiName="Speed Monitoring - Transmit Datarate - Multicast" unit="megabit/second"  collected="Y"/>
         <counter objectType="ietf-interfaces:interfaces-state/interface/nokia-interface-speed-monitoring:speed-monitoring/data/history" counterName="transmit-unicast-datarate" counterGuiName="Speed Monitoring - Transmit Datarate - Unicast" unit="megabit/second"  collected="Y"/>
