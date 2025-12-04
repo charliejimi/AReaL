@@ -8,7 +8,8 @@
     <modelmeta modelName="fiber" modelType="std" modelVersion="1.0.0" description="IPFIX collection model for xpon devices" family="LS-FX-FWLT-C-25.6" collectorType="IPFIX" destination="kafka,openTSDB" topic="IPFIX-XPON" periodicity="PT15M" author="Nokia" date="10-Sep-2025 13:22" build="25.6.1-REL_271"/>
 
     <alarms>
- 
+      AAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     </alarms>
 
     <collectedCounters>
@@ -16,10 +17,7 @@
         <counter objectType="ietf-hardware:hardware-state/component" counterName="state/admin-state"
                  counterGuiName="Administrative State" collected="Y" isAdmin="Y">
             <enumMapping>
-                <enum name="enum1" value="1" guiName="Locked"/>
-                <enum name="enum2" value="1" guiName="Locked"/>
-                <enum name="enum3" value="1" guiName="Locked"/>
-                <enum name="enum4" value="0" guiName="Unlocked"/>
+
             </enumMapping>
         </counter>
 
